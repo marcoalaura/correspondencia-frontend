@@ -1,0 +1,48 @@
+<md-card>
+  <md-table-container>
+    <table md-table ng-model="selected" md-progress="promise">
+      <thead md-head>
+        <tr md-row>
+          <th md-column ng-if=" vm.buttons.length > 0">Acciones</th>
+          <th ng-repeat="field in vm.fields" md-column >
+            <span>{{field.field_name}}</span>
+          </th>
+
+        </tr>
+      </thead>
+
+      <tbody md-body >
+        <tr md-row md-select="item" ng-repeat="item in vm.items" class="seleccionado">
+          <td md-cell class="" ng-if="vm.buttons.length > 0">
+            <span ng-repeat="button in vm.buttons">
+              <md-button
+              class="md-icon-button boton-extra"
+              aria-label="button.tooltip"
+              ng-click="vm.buttonEvent($event, item, button.onclick)"
+              ng-if="!button.condition"
+              >
+                <md-tooltip>{{button.tooltip}}</md-tooltip>
+                <md-icon>{{button.icon}}d</md-icon>
+              </md-button>
+              <md-button
+              class="md-icon-button boton-extra"
+              aria-label="button.tooltip"
+              ng-click="vm.buttonEvent($event, item, button.onclick)"
+              ng-if="button.condition && item[button.condition.field] == button.condition.is"
+              >
+                <md-tooltip>{{button.tooltip}}</md-tooltip>
+                <md-icon>{{button.icon}}d</md-icon>
+              </md-button>
+            </span>
+          </td>
+
+          <td md-cell ng-repeat="(key, value) in vm.fields" >
+            <div>{{item[value.field_value]}}</div>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+  </md-table-container>
+</md-card>

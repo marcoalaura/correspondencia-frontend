@@ -1,0 +1,2 @@
+var backend_api = 'BACKEND_URL';
+var subdomain = '';

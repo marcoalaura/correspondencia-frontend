@@ -1,0 +1,42 @@
+// @import '../../../styles/sass/_variables.scss';
+
+/* ====================================
+                DEMOFI
+==================================== */
+
+// .demofi-modal {
+// 	max-width: 670px;
+// 	width: 100%;
+
+// 	md-card {
+// 		margin: 0 0 5px 0;
+// 	}
+// 	md-card-content {
+// 		padding: 5px 8px;
+// 	}
+// 	md-input-container {
+// 		margin: 0;
+// 	}
+// 	.img-certificado {
+// 		width: 160px;
+//                   height: 200px;
+// 	}
+// 	md-list {
+// 		padding: 0;
+// 		p {
+// 			font-size: .8rem;
+// 			margin-left: 10px;
+// 		}
+// 	}
+// }
+
+
+  .img-certificado {
+    // background-image: url('../../../assets/images/certificate.png');
+    background-size: 100% 100%;
+    display:inline-block;
+    height: 160px;
+    width: 150px;
+    margin-left: 25px;
+    margin-top: 25px;
+  }

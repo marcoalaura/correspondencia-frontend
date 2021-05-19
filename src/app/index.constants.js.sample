@@ -1,0 +1,13 @@
+/* global moment:false */
+(function() {
+  'use strict';
+
+  angular
+    .module('app')
+    .constant('moment', moment)
+    .constant('appName', 'app')
+    .constant('PageNoLogin', ['login'])
+    .constant('authUrl', 'BACKEND_URL/autenticar') // Auth
+    .constant('restUrl', 'BACKEND_URL/api/v1/' ) // Rest Api Backend
+    .constant('backUrl', 'BACKEND_URL/') // Backend
+})();
